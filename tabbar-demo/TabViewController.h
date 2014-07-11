@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TabViewController : UITabBarController<UITabBarControllerDelegate>
+@property (strong, nonatomic) UINavigationController *tabbar1Nav;
 
 @end

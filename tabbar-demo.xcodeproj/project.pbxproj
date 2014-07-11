@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A214A0DE196FABD000D57730 /* nav_bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A214A0DD196FABD000D57730 /* nav_bar@2x.png */; };
 		A24CF7D5194FFCC000B65F89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A24CF7D4194FFCC000B65F89 /* Foundation.framework */; };
 		A24CF7D7194FFCC000B65F89 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A24CF7D6194FFCC000B65F89 /* CoreGraphics.framework */; };
 		A24CF7D9194FFCC000B65F89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A24CF7D8194FFCC000B65F89 /* UIKit.framework */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A214A0DD196FABD000D57730 /* nav_bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_bar@2x.png"; sourceTree = "<group>"; };
 		A24CF7D1194FFCC000B65F89 /* tabbar-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tabbar-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A24CF7D4194FFCC000B65F89 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A24CF7D6194FFCC000B65F89 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -130,13 +132,14 @@
 		A24CF7DA194FFCC000B65F89 /* tabbar-demo */ = {
 			isa = PBXGroup;
 			children = (
+				A214A0DD196FABD000D57730 /* nav_bar@2x.png */,
+				A2B75655196E8D1A00B11F6C /* tab1 */,
 				A24CF809194FFCE200B65F89 /* MainViewController.h */,
 				A24CF80A194FFCE200B65F89 /* MainViewController.m */,
 				A24CF80B194FFCE200B65F89 /* MainViewController.xib */,
 				A24CF80E194FFD9A00B65F89 /* TabViewController.h */,
 				A24CF80F194FFD9A00B65F89 /* TabViewController.m */,
 				A2B75656196E8D2400B11F6C /* tab2 */,
-				A2B75655196E8D1A00B11F6C /* tab1 */,
 				A24CF7E3194FFCC000B65F89 /* AppDelegate.h */,
 				A24CF7E4194FFCC000B65F89 /* AppDelegate.m */,
 				A24CF7EC194FFCC000B65F89 /* Images.xcassets */,
@@ -277,6 +280,7 @@
 				A24CF7ED194FFCC000B65F89 /* Images.xcassets in Resources */,
 				A24CF81C194FFDBF00B65F89 /* TabViewController2.xib in Resources */,
 				A2B75653196E8A6200B11F6C /* TabViewController1_nav.xib in Resources */,
+				A214A0DE196FABD000D57730 /* nav_bar@2x.png in Resources */,
 				A24CF80D194FFCE200B65F89 /* MainViewController.xib in Resources */,
 				A24CF7DF194FFCC000B65F89 /* InfoPlist.strings in Resources */,
 			);
@@ -378,7 +382,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -411,7 +415,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

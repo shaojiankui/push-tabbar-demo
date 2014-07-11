@@ -29,11 +29,13 @@
     // Do any additional setup after loading the view from its nib.
     self.title = @"ViewController2";
 
-    self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
-    self.extendedLayoutIncludesOpaqueBars = NO;
-    self.navigationController.navigationBar.translucent = NO;
-    self.modalPresentationCapturesStatusBarAppearance = NO;
+    if ( ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0f)) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+        self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
+        self.extendedLayoutIncludesOpaqueBars = NO;
+        self.navigationController.navigationBar.translucent = NO;
+        self.modalPresentationCapturesStatusBarAppearance = NO;
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated {

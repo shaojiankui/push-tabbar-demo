@@ -9,6 +9,7 @@
 #import "TabViewController.h"
 #import "TabViewController1.h"
 #import "TabViewController2.h"
+#import "AppDelegate.h"
 @interface TabViewController ()
 
 @end
@@ -36,19 +37,22 @@
     vc2.tabBarItem.title=@"two";
 
     
-    UINavigationController *tab1Nav = [[UINavigationController alloc] init];
-    [tab1Nav pushViewController:vc1 animated:NO];
+    self.tabbar1Nav = [[UINavigationController alloc] init];
+    [self.tabbar1Nav pushViewController:vc1 animated:NO];
     
     
-    self.viewControllers = @[tab1Nav,vc2];
+    self.viewControllers = @[self.tabbar1Nav,vc2];
     [self setTitle:@"title"];
     self.delegate = self;
     
-    self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
-    self.extendedLayoutIncludesOpaqueBars = NO;
-    self.navigationController.navigationBar.translucent = NO;
-    self.modalPresentationCapturesStatusBarAppearance = NO;
+    if ( ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0f)) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+        self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
+        self.extendedLayoutIncludesOpaqueBars = NO;
+        self.navigationController.navigationBar.translucent = NO;
+        self.modalPresentationCapturesStatusBarAppearance = NO;
+    }
+    
 
 }
 
@@ -56,7 +60,14 @@
 
 -(void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
 {
-  
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    
+    NSLog(@"appDelegate nav frame%@",NSStringFromCGRect(appDelegate.navigationController.view.frame));
+    NSLog(@"appDelegate navigationBar frame%@",NSStringFromCGRect(appDelegate.navigationController.navigationBar.frame));
+
+    NSLog(@"tabBar nav frame%@",NSStringFromCGRect(self.tabbar1Nav.view.frame));
+    NSLog(@"tabBar navigationBar frame%@",NSStringFromCGRect(self.tabbar1Nav.navigationBar.frame));
+
     self.title =viewController.title;
 }
 
